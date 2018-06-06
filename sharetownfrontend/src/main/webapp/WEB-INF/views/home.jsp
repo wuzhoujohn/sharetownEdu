@@ -9,6 +9,7 @@
 <spring:url var="css" value="/resources/css" />
 <spring:url var="js" value="/resources/js" />
 <spring:url var="pictures" value="/resources/pictures" />
+<spring:url var="plugins" value="/resources/plugins" />
 
 <!-- use the set tag from jstl lib to set a variable contextRoot with value pageContext.request.contextPath -->
 <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
@@ -18,31 +19,59 @@
 
 <head>
 
+<title>Course</title>
 <meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Course Project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- get the title property from the model -->
-<title>Online Shopping Store - ${title}</title>
+<!-- <title>Online Shopping Store - ${title}</title> -->
+
+
 <script>
 	window.menu = '${title}';
 	
 	window.contextRoot = '${contextRoot}'
 </script>
 
-<!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
-<!-- Custom styles for this template -->
-<link href="${css}/myapp.css" rel="stylesheet">
+<link href="${css}/contact_responsive.css" rel="stylesheet">
 
-<!-- bootstrap theme css file -->
-<link href="${css}/bootstrap-superhero-theme.css" rel="stylesheet">
+<link href="${css}/contact_styles.css" rel="stylesheet">
 
-<!--  bootstrap datatable css file -->
-<link href="${css}/dataTables.bootstrap.min.css" rel="stylesheet">
+<link href="${css}/courses_responsive.css" rel="stylesheet">
+
+<link href="${css}/courses_styles.css" rel="stylesheet">
+
+<link href="${css}/element_responsive.css" rel="stylesheet">
+
+<link href="${css}/element_styles.css" rel="stylesheet">
+
+<link href="${css}/main_styles.css" rel="stylesheet">
+
+<link href="${css}/news_post_responsive.css" rel="stylesheet">
+
+<link href="${css}/news_post_styles.css" rel="stylesheet">
+
+<link href="${css}/news_responsive.css" rel="stylesheet">
+
+<link href="${css}/news_styles.css" rel="stylesheet">
+
+<link href="${css}/responsive.css" rel="stylesheet">
+
+<link href="${css}/teachers_responsive.css" rel="stylesheet">
+
+<link href="${css}/teachers_styles.css" rel="stylesheet">
+
+<link href="${plugins}/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" type="text/css" href="${plugins}/OwlCarousel2-2.2.1/owl.carousel.css">
+
+<link rel="stylesheet" type="text/css" href="${plugins}/OwlCarousel2-2.2.1/owl.theme.default.css">
+
+<link rel="stylesheet" type="text/css" href="${plugins}/OwlCarousel2-2.2.1/animate.css">
 
 </head>
 
@@ -86,20 +115,19 @@
 	<c:if test="${userClickManageProducts == true}">
 		<%@include file="manageProducts.jsp"%>
 	</c:if>
-	
-	<!-- /.container -->
 
 	<!-- Footer comes here -->
 	<%@include file="./sharedPages/footer.jsp"%>
 
 	<!-- Bootstrap core JavaScript -->
-	<script src="${js}/jquery.js"></script>
-	<script src="${js}/popper.min.js"></script>
+	<script src="${js}/jquery-3.2.1.min.js"></script>
+	
+	<script src="${js}/popper.js"></script>
+	
 	<script src="${js}/bootstrap.min.js"></script>
-	<!-- DataTable PlugIn -->
+	
 	<script src="${js}/jquery.dataTables.min.js"></script>
 	
-	<!-- datatable bootstrap js file -->
 	<script src="${js}/dataTables.bootstrap.min.js"></script>
 	
 	<script src="${js}/jquery.validate.js"></script>
@@ -107,6 +135,38 @@
 	<script src="${js}/bootbox.min.js"></script>
 	
 	<script src="${js}/app.js"></script>
+	
+	<script src="${js}/contact_custom.js"></script>
+	
+	<script src="${js}/courses_custom.js"></script>
+	
+	<script src="${js}/custom.js"></script>
+	
+	<script src="${js}/elements_custom.js"></script>
+	
+	<script src="${js}/jquery.js"></script>
+	
+	<script src="${js}/news_custom.js"></script>
+	
+	<script src="${js}/news_post_custom.js"></script>
+	
+	<script src="${js}/teachers_custom.js"></script>
+	
+	<script src="${plugins}/greensock/TweenMax.min.js"></script>
+	
+	<script src="${plugins}/greensock/TimelineMax.min.js"></script>
+	
+	<script src="${plugins}/scrollmagic/ScrollMagic.min.js"></script>
+	
+	<script src="${plugins}/greensock/animation.gsap.min.js"></script>
+	
+	<script src="${plugins}/greensock/ScrollToPlugin.min.js"></script>
+	
+	<script src="${plugins}/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+	
+	<script src="${plugins}/scrollTo/jquery.scrollTo.min.js"></script>
+	
+	<script src="${plugins}/easing/easing.js"></script>
 
 </body>
 
